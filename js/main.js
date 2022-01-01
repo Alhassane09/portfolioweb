@@ -3,10 +3,67 @@ document.addEventListener('DOMContentLoaded', function(){
 window.addEventListener('scroll', myFunctionForSticky);
 // Recupérer la nav (menu)
 let nav = document.getElementById("nav");
-// Ajout de la classe sticky qauand on scroll
+// Ajout de la classe sticky quand on scroll
 function myFunctionForSticky() {
  nav.classList.toggle("sticky", window.scrollY > 0) 
 }
+
+
+window.addEventListener('scroll', () => {
+  const {scrollTop, clientHeight} = document.documentElement;
+
+  let hc = document.querySelectorAll('.h3');
+  let front = document.querySelector('.front');
+  let back = document.querySelector('.back');
+  let cms = document.querySelector('.cms');
+  let env = document.querySelector('.environnement');
+
+  // permet de récupérer chaque élément avec la classe 'h3'
+  for (let i = 0; i < hc.length; i++) {
+    var hctop = hc[i].getBoundingClientRect().top;
+    if(scrollTop > (scrollTop + hctop).toFixed() - clientHeight * 1) {
+      hc[i].classList.add('active');
+      hc[i].classList.remove('hidden');
+    }else {
+      hc[i].classList.add('hidden');
+    }
+  }
+  
+  let frontop = front.getBoundingClientRect().top;
+  let backtop = back.getBoundingClientRect().top;
+  let cmstop = cms.getBoundingClientRect().top;
+  let envtop = env.getBoundingClientRect().top;
+  
+  if(scrollTop > (scrollTop + frontop).toFixed() - clientHeight * 1) {
+    front.classList.add('active');
+    front.classList.remove('hidden');
+  }else{
+    front.classList.add('hidden');
+  }
+
+  if(scrollTop > (scrollTop + backtop).toFixed() - clientHeight * 1) {
+    back.classList.add('active');
+    back.classList.remove('hidden');
+  }else{
+    back.classList.add('hidden');
+  }
+
+  if(scrollTop > (scrollTop + cmstop).toFixed() - clientHeight * 1) {
+    cms.classList.add('active');
+    cms.classList.remove('hidden');
+  }else{
+    cms.classList.add('hidden');
+  }
+
+  if(scrollTop > (scrollTop + envtop).toFixed() - clientHeight * 1) {
+    env.classList.add('active');
+    env.classList.remove('hidden');
+  }else{
+    env.classList.add('hidden');
+  }
+
+})
+
 })
 // effet machine à ecrire
 
