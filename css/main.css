@@ -566,6 +566,12 @@ margin: 0;
   }
 }
 
+@media (min-width : 901px) {
+  .papropos {
+    padding-left: 2rem;
+  }
+}
+
 @media (max-width : 900px) {
 
   .propos {
@@ -615,7 +621,7 @@ margin: 0;
 @media only screen and (max-width : 400px) {
 
   .imghaut {
-    background-size: cover;
+    background-attachment: scroll;
   }
   
   .mescontact div {
