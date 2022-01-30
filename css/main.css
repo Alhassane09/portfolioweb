@@ -218,7 +218,6 @@ div {
 
 #competence {
   height: 100rem;
-  background-color: #28282844;
 }
 
 .competence h2 {
@@ -239,7 +238,7 @@ margin: 0;
   border-radius: 1rem;
   padding: 0 1rem 0 1rem;
   margin: 0 1rem 0 1rem;
-  box-shadow: 10px 10px 10px #5904045e;
+  box-shadow: 10px 10px 10px 10px #333;
   transition: all .7s ease-in-out ;
   justify-content: center;
   text-align: center;
