@@ -102,8 +102,8 @@ div {
 /* stylisation de la page d'accueil  */
 
 .imghaut {
-  background-image: url("https://alhassane09.github.io/portfolioweb/img/imghaut.jpg");
-  /* background-image: url("/img/imghaut.png"); */
+  /* background-image: url("https://alhassane09.github.io/portfolioweb/img/imghaut.jpg"); */
+  background-image: url("/img/imghaut.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
