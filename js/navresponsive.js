@@ -11,13 +11,13 @@ menubtn.addEventListener("click", () => {
     }else {
     nav.classList.add('sticky');}
     menubtn.classList.toggle('rotate');
-
-    for (let i = 0; i < menuitem.length; i++) {
-        let menui = menuitem[i];
-        menui.addEventListener("click", ()=> {
-        menu.classList.remove('active');
-        menubtn.classList.toggle('rotate');
-        })
-      }
 });
+
+for (let i = 0; i < menuitem.length; i++) {
+    let menui = menuitem[i];
+    menui.addEventListener("click", ()=> {
+    menu.classList.remove('active');
+    menubtn.classList.toggle('rotate');
+    })
+  };
 
