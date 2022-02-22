@@ -16,6 +16,7 @@ menubtn.addEventListener("click", () => {
         let menui = menuitem[i];
         menui.addEventListener("click", ()=> {
         menu.classList.remove('active');
+        menubtn.classList.toggle('rotate');
         })
       }
 });
