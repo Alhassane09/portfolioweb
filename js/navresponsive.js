@@ -1,4 +1,5 @@
 let menu = document.querySelector(".menu");
+let menuitem = document.querySelectorAll("#menuitem");
 let menubtn = document.querySelector(".menubtn");
 let nav = document.querySelector("#nav");
 
@@ -10,4 +11,12 @@ menubtn.addEventListener("click", () => {
     }else {
     nav.classList.add('sticky');}
     menubtn.classList.toggle('rotate');
+
+    for (let i = 0; i < menuitem.length; i++) {
+        let menui = menuitem[i];
+        menui.addEventListener("click", ()=> {
+        menu.classList.remove('active');
+        })
+      }
 });
+

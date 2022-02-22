@@ -86,10 +86,14 @@ div {
   }
 
 
+  #nav li a:hover {
+    color: #ef233c;
+  }
+
 
   /* La classe sticky qui avec JS va apparaitre */
 #nav.sticky {
-    background-image: linear-gradient(260deg,#590404 0%, #333 100%);
+    background-color: #1c2120;
     width: 100%;
     opacity: 100%;
     padding-top: 2px;
@@ -99,11 +103,10 @@ div {
 
 .imghaut {
   background-image: url("https://alhassane09.github.io/portfolioweb/img/imghaut.jpg");
-  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+  /* background-image: url("/img/imghaut.png"); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed;
   width: 100%;
   max-width: 100%;
   height: 102vh;
@@ -135,8 +138,6 @@ div {
   text-transform: uppercase;
   font-family: 'Cabin', sans-serif;
   font-size: 2rem;
-  text-decoration: underline;
-  text-underline-offset: .5rem;
 }
 
 #apropos {
@@ -153,10 +154,10 @@ div {
 }
 
 
-/* personnalisation du paragraphe et des centres d'interets  */
+/* personnalisation du paragraphe */
 
 .propos {
-  display: grid;
+  display: block;
   gap: 15px;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
@@ -165,52 +166,27 @@ div {
   margin-bottom: 2rem;
 }
 
-
-.imgapropos {
-  display: grid;
+form {
+  margin-top: 5rem;
+  text-align: center;
 }
-
-.imgapropos .imgmoi {
-  width: 100%;
-  grid-column: 1;
-  grid-row: 1;
-  grid-area: overlap;
-}
-
-.imgapropos .photomoi {
-  grid-column: 1;
-  grid-row: 1;
-  grid-area: overlap;
-  opacity: 0;
-  transition: .5s ease-in-out;
-}
-
-.imgapropos:hover .photomoi {
-  opacity: 1;
-}
-
-.papropos {
-  font-size: 1.2rem;
-  grid-column: 2/4;
-  grid-row: 1;
-}
-
 
 #cv {
+  grid-row: 2;
   width: 20rem;
   height: 3rem;
   background-color: #333;
   border-radius: 3rem;
+  border: solid white 1px;
   text-decoration: none;
   font-size: 1.5rem;
   font-family: 'cabin';
-  color: #F2E2D2;
+  color: white;
 }
 
 
 #cv:hover {
-  background-color: #590404;
-  color: #fff;
+  color: #ef233c;
   transition: 0.5S ease;
 }
 
@@ -218,6 +194,7 @@ div {
 
 #competence {
   height: 100rem;
+  background-image: linear-gradient(white,#787e7d91);
 }
 
 .competence h2 {
@@ -227,21 +204,16 @@ margin: 0;
 }
 
 #competence .card {
-  display: block;
-  text-align: center;
   margin: 0 5rem;
 }
 
 .card > div {
   background-color: rgba(255, 255, 255, 0.377);
   overflow: hidden;
-  border-radius: 1rem;
   padding: 0 1rem 0 1rem;
   margin: 0 1rem 0 1rem;
-  box-shadow: 10px 10px 10px 10px #333;
+  border: solid .2px #787e7dbe;
   transition: all .7s ease-in-out ;
-  justify-content: center;
-  text-align: center;
   /* animation: floating 3s ease-in-out infinite, wipe-enter 2s ease; */
 }
 
@@ -340,26 +312,27 @@ margin: 0;
 .skills{
   width: 100%;
   padding: 0 20px;
-  margin: 0;
-}
-
-.skill-name{
-  font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
   margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
 }
 
-.skill-bar{
-  height: 1rem;
-  background: #282828;
+.skill {
+  margin-top: 1rem;
+  width: 50%;
+  height: 100%;
 }
 
-.skill-per{
-  height: 1rem;
-  background: #590404;
-  position: relative;
+.myenv {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.myenv .skill-name {
+  width: 50%;
 }
 
 .compprogress .myenv * {
@@ -373,7 +346,8 @@ margin: 0;
   width: 100%;
   height: 50rem;
   text-align: center;
-}
+  background-image: linear-gradient(#787e7d91,white);
+  }
 
 .creation h2 {
   padding-top: 4rem;
@@ -392,7 +366,6 @@ margin: 0;
 .contact {
   width: 100%;
   height: 40rem;
-  background-color: #ecbea191;
 }
 
 .contact h2 {
@@ -417,12 +390,12 @@ margin: 0;
   text-transform: uppercase;
   font-family: 'cabin', sans-serif;
   font-weight: 900;
-  border: solid 1px #E4A58C;
+  border: solid 1px #787e7d91;
   border-radius: .5rem;
 }
 
 .mescontact div:hover {
-  box-shadow: 10px 10px 10px #590404;
+  box-shadow: 1px 1px 5px #ef233c;
 }
 
 
@@ -434,30 +407,31 @@ margin: 0;
 .un {
   grid-column: span 1;
   grid-row: 1;
-  background-color: #E4A58C;
+  background-color: #787e7d6c;
 }
 .deux {
   grid-column: 1;
   grid-row: 2;
-  background-color: #E4A58C;
+  background-color: #787e7d6c;
 }
 .trois {
   grid-column: 2;
   grid-row: 1;
-  background-color: #E4A58C;
+  background-color: #787e7d6c;
 }
 
 .quatre {
   grid-column: 2;
   grid-row: 2;
-  background-color: #E4A58C;
+  background-color: #787e7d6c;
 }
 
 /* footer  */
 
 #footer{
   width: 100%; 
-  height: 10rem;
+  height: 4rem;
+  border-top: solid 1px red;
   background-color: #333;
   text-align: center;
   display: block;
@@ -470,20 +444,6 @@ margin: 0;
   font-size: 1rem;
 }
 
-#footer div {
-  padding-top: 1rem;
-  display: flex;
-  justify-content: center;
-  margin: auto;
-}
-
-#footer div a{
-  text-decoration: none;
-  font-size: 2rem;
-  text-align: center;
-  color: #F2E2D2;
-  margin: 1rem 1rem 1rem 1rem;
-}
 
 /* responsive  */
 @media (min-width: 991px ) {
@@ -548,7 +508,7 @@ margin: 0;
   }
 
   #nav.sticky {
-    background-image: linear-gradient(260deg,#590404 0%, #333 100%);
+    background-color: #1c2120;
     width: 100%;
     opacity: 100%;
   }
